@@ -38,8 +38,8 @@ void erase_ship(int x,int y){
 
 void draw_bullet(int x,int y){
 	gotoxy(x,y);
-    setcolor(3,3);
-	printf("|");
+    setcolor(2,3);
+	printf("o");
 }
 
 void erase_bullet(int x,int y){
@@ -73,10 +73,10 @@ int main()
 		
 		if(direction==1) {if (x>0) {erase_ship(x,y); draw_ship(--x,y);}}
 		else if(direction==2) {if (x<79) {erase_ship(x,y); draw_ship(++x,y);}}
-		
-		while(bullet_status==1){
+	
+		if(bullet_status==1){
 			erase_bullet(xb,yb);
-			if(yb<0){ draw_bullet(xb,--yb);}
+			if(yb>0){ draw_bullet(xb,--yb);}
 			else{bullet_status=0;}	
 		}
 		
