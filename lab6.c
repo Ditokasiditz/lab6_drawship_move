@@ -66,7 +66,7 @@ int main()
 			if(ch=='a') {direction=1;}
 			if(ch=='d') {direction=2;}
 			if(ch=='s') { direction=0;draw_ship(x,y);}
-			if(ch=='j') {
+			if(ch==' ') {
 				bullet_status[i]=1; 
 				xb[i]=x+3;
 				yb[i]=y-1;
@@ -110,7 +110,7 @@ int main()
 		}
 			
 		
-		Sleep(100);
+		Sleep(500);
 	}while (ch!='x');
 return 0;
 }
